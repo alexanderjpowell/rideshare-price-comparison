@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:uber="http://schemas.android.com/apk/res-auto"
+    xmlns:lyft="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/pickup_address_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:onClick="launchAddressAutocompleteIntent"
+        android:hint="@string/pickup_edit_text_name"
+        android:inputType="textPostalAddress" />
+
+    <EditText
+        android:id="@+id/dropoff_address_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:onClick="launchAddressAutocompleteIntent"
+        android:hint="@string/dropoff_edit_text_name"
+        android:inputType="textPostalAddress" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
+            <RadioButton
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/rideType1" />
+
+            <RadioButton
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/rideType2"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/rideType3" />
+
+            <RadioButton
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/rideType4" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/getRidesButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".75"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="findRidesButtonOnClick"
+            android:theme="@style/AppTheme.Button"
+            android:text="@string/buttonText" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight=".25"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="resetButtonOnClick"
+            android:theme="@style/AppTheme.Button"
+            android:text="@string/resetButtonText" />
+
+    </LinearLayout>
+
+    <com.uber.sdk.android.rides.RideRequestButton
+        android:id="@+id/uber_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        uber:ub__style="black" />
+
+    <com.lyft.lyftbutton.LyftButton
+        android:id="@+id/lyft_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        lyft:lyftStyle="lyftMulberryDark" />
+
+</LinearLayout>

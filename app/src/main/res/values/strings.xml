@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FindMyRide</string>
+    <string name="label_name">Find My Ride</string>
+    <string name="pickup_edit_text_name">Enter Pickup Location</string>
+    <string name="dropoff_edit_text_name">Where To?</string>
+    <string name="buttonText">Find a Ride</string>
+    <string name="resetButtonText">Reset</string>
+
+    <string name="rideType1">Pool/Line</string>
+    <string name="rideType2">UberX/Classic</string>
+    <string name="rideType3">UberXL/Plus</string>
+    <string name="rideType4">Black</string>
+
+
+</resources>
